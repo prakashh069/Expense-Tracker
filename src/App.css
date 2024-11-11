@@ -1,0 +1,154 @@
+/* General App Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 800px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Section Headers */
+h2 {
+  color: #34495e;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+/* Button Styling */
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s;
+  width: 100%;
+  max-width: 150px;
+  margin: 10px auto;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+input::placeholder {
+  color: #bbb;
+}
+
+/* Responsive Layout for Components */
+@media (min-width: 600px) {
+  .app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/* Bubble Progress Styling */
+.bubble-progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.bubble {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  background: #e0f7fa;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.bubble-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #004d40;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+  .bubble {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* List Styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f7f9fa;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Challenges Section */
+.challenges, .badge-system, .progress-tracker {
+  background-color: #f9f9fb;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 600px) {
+  .app {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .challenges, .badge-system, .progress-tracker {
+    margin: 10px 0;
+  }
+}
